@@ -6,6 +6,8 @@
     --lavender: #F4F0F8;
     --light-yellow: #FBF6EA;
     --white: white;
+    --dark-grey: #2e3040;
+    --medium-grey: #6D6E76;
 }
 
 * {
@@ -17,6 +19,9 @@
 
 p {
     font-family: "Inter";
+    font-size: 16px;
+    color: var(--medium-grey);
+    line-height: 28px;
 }
 
 a {
@@ -36,6 +41,13 @@ button {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+button:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 h1 {
@@ -56,6 +68,21 @@ h3 {
     font-weight: 700;
 }
 
+input {
+    border: none;
+    font-size: 16px;
+    font-family: "Inter";
+    color: var(--black);
+    font-weight: 400;
+    border: 1px solid #6D6E7680
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border: 1px solid #6D6E7680
+}
+
 .container {
     max-width: 1282px;
     margin: 0 auto;
@@ -64,17 +91,18 @@ h3 {
 /* header */
 .header {
     background-color: var(--black);
-    position: fixed;
+    /* position: fixed;
     top: 0;
     right: 0;
-    left: 0;
+    left: 0; */
+
 }
 
-.header .navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
-    height: 80px;
     align-items: center;
+    height: 80px;
 }
 
 .navbar .menu {
@@ -107,9 +135,59 @@ h3 {
 
 .button-header {
     color: var(--black);
+    background-color: var(--white);
 }
 
 .button-header:hover {
     background-color: var(--yellow);
+    color: var(--black);
 }
+
 /* end header */
+
+/* footer */
+.footer {
+    background-color: var(--black);
+    padding: 57px 0;
+}
+
+.footer-input {
+    background-color: var(--dark-grey);
+    padding: 80px 70px;
+    margin: 57px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-input h2 {
+    color: var(--white);
+    max-width: 600px;
+}
+
+.footer-input input {
+    background-color: transparent;
+    color: var(--medium-grey);
+    height: 56px;
+    padding: 0 20px;
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contacts .infor ul {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-contacts .infor a {
+    color: var(--medium-grey);
+    font-size: 16px;
+}
+
+.footer-contacts .infor a:hover {
+    color: var(--yellow);
+}
