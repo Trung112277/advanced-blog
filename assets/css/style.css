@@ -27,6 +27,7 @@ p {
 a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    line-height: 28px;
 }
 
 li {
@@ -54,18 +55,22 @@ h1 {
     font-size: 56px;
     font-weight: 700;
     color: var(--white);
+    line-height: 64px;
 }
 
 h2 {
     font-size: 36px;
     font-weight: 700;
     color: var(--black);
+    line-height: 48px;
+
 }
 
 h3 {
     font-size: 28px;
     color: var(--black);
     font-weight: 700;
+    line-height: 40px;
 }
 
 input {
@@ -74,7 +79,8 @@ input {
     font-family: "Inter";
     color: var(--black);
     font-weight: 400;
-    border: 1px solid #6D6E7680
+    border: 1px solid #6D6E7680;
+    line-height: 28px;
 }
 
 input:focus {
@@ -83,9 +89,22 @@ input:focus {
     border: 1px solid #6D6E7680
 }
 
+strong {
+    font-weight: 800;
+}
+
 .container {
     max-width: 1282px;
     margin: 0 auto;
+}
+
+.name {
+    color: var(--yellow);
+}
+
+.sub-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 /* header */
@@ -178,16 +197,60 @@ input:focus {
     justify-content: space-between;
 }
 
-.footer-contacts .infor ul {
+.infor ul {
     display: flex;
     gap: 20px;
 }
 
-.footer-contacts .infor a {
-    color: var(--medium-grey);
+.infor a {
+    color: var(--black);
     font-size: 16px;
 }
 
-.footer-contacts .infor a:hover {
+.infor ul li a:hover {
     color: var(--yellow);
+}
+
+.footer-contacts .infor a {
+    color: var(--medium-grey);
+}
+
+/* end footer */
+
+/* main */
+/* jumbotron */
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    padding: 170px 0 230px 0;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('/assets/images/bg-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+.jumbotron p {
+    color: var(--white);
+    margin: 25px 0;
+    max-width: 600px;
+}
+
+.jumbotron .content .text {
+    margin-bottom: 70px;
+}
+
+.jumbotron .content {
+    max-width: 860px;
 }
