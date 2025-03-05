@@ -1,0 +1,115 @@
+:root {
+    --black: #232536;
+    --yellow: #FFD050;
+    --grey: #6D6E76;
+    --purple: #592EA9;
+    --lavender: #F4F0F8;
+    --light-yellow: #FBF6EA;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sen";
+    font-weight: 400;
+}
+
+p {
+    font-family: "Inter";
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 48px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+h3 {
+    font-size: 28px;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1282px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .menu ul,
+.navbar .menu nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu ul {
+    gap: 30px;
+}
+
+.navbar a {
+    color: var(--white);
+}
+
+.navbar a:hover {
+    color: var(--yellow);
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.button-header {
+    color: var(--black);
+}
+
+.button-header:hover {
+    background-color: var(--yellow);
+}
+/* end header */
