@@ -359,3 +359,39 @@ section {
     font-size: 18px;
     line-height: 32px;
 }
+
+/* end about */
+
+/* category */
+.category h2 {
+    text-align: center;
+}
+
+.category .category-box {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.category-box .category-item {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    gap: 10px;
+    display: grid;
+}
+
+.category-box .category-item:hover {
+    border-color: var(--yellow);
+    background-color: var(--yellow);
+}
+
+.category-item img {
+    background-color: var(--light-yellow);
+    border-radius: 10px;
+}
+
+.category-box .category-item:hover img {
+    background-color: white;
+
+}
