@@ -8,6 +8,7 @@
     --white: white;
     --dark-grey: #2e3040;
     --medium-grey: #6D6E76;
+    --border-color: #f0f0f1;
 }
 
 * {
@@ -15,6 +16,7 @@
     padding: 0;
     font-family: "Sen";
     font-weight: 400;
+    transition: all 0.3s ease-in-out;
 }
 
 p {
@@ -26,7 +28,6 @@ p {
 
 a {
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
     line-height: 28px;
 }
 
@@ -41,14 +42,13 @@ button {
     padding: 16px 48px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
     background-color: var(--yellow);
     color: var(--black);
+    width: fit-content;
 }
 
 button:hover {
-    background-color: var(--black);
-    color: var(--white);
+    filter: brightness(80%);
 }
 
 h1 {
@@ -93,12 +93,20 @@ strong {
     font-weight: 800;
 }
 
+section {
+    padding: 50px 0;
+}
+
 .container {
     max-width: 1282px;
     margin: 0 auto;
 }
 
 .name {
+    color: var(--purple);
+}
+
+.jumbotron .name {
     color: var(--yellow);
 }
 
@@ -107,14 +115,20 @@ strong {
     letter-spacing: 3px;
 }
 
+.blog-card {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--dark-grey);
+}
+
 /* header */
 .header {
     background-color: var(--black);
-    /* position: fixed;
+    position: fixed;
     top: 0;
     right: 0;
-    left: 0; */
-
+    left: 0;
+    z-index: 99;
 }
 
 .navbar {
@@ -223,6 +237,7 @@ strong {
     position: relative;
     overflow: hidden;
     padding: 170px 0 230px 0;
+    margin-top: 80px;
 }
 
 .jumbotron::before {
@@ -253,4 +268,60 @@ strong {
 
 .jumbotron .content {
     max-width: 860px;
+}
+
+/*end jumbotron */
+
+/* post-blog */
+.post-blog {
+    padding-top: 100px;
+}
+
+.post-blog .content {
+    display: flex;
+    gap: 20px;
+}
+
+.post-blog .all-post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-blog .item-box {
+    margin-top: 30px;
+    padding: 25px;
+}
+
+.placeholder .item-box {
+    border: 1px solid var(--border-color);
+    gap: 25px;
+    display: grid;
+}
+
+.placeholder img {
+    width: 669px;
+}
+
+.placeholder-items .all-post a {
+    color: var(--purple);
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.placeholder-items .all-post {
+    align-items: baseline;
+}
+
+.placeholder-items .items {
+    margin-top: 30px;
+}
+
+.placeholder-items .item-blog .block-blog:hover {
+    background-color: var(--light-yellow);
+}
+
+.placeholder-items .item-blog .block-blog {
+    padding: 30px;
+    display: grid;
+    gap: 15px;
 }
