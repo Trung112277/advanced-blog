@@ -29,6 +29,7 @@ p {
 a {
     text-decoration: none;
     line-height: 28px;
+    color: var(--purple);
 }
 
 li {
@@ -232,6 +233,7 @@ section {
 /* end footer */
 
 /* main */
+
 /* jumbotron */
 .jumbotron {
     position: relative;
@@ -324,4 +326,36 @@ section {
     padding: 30px;
     display: grid;
     gap: 15px;
+}
+
+/* end post-blog */
+
+/* about */
+.about .content {
+    padding: 100px;
+    background-color: var(--lavender);
+    display: flex;
+    gap: 40px;
+}
+
+.about .content>* {
+    width: calc(50% - 20px);
+}
+
+.about .box-item {
+    display: grid;
+    gap: 20px;
+    align-self: baseline;
+}
+
+.about .sub-title {
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--black);
+}
+
+.about a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
 }
