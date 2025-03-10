@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a aria-label="Home" href="index.html">Home</a>
                             </li>
                             <li>
                                 <a href="">Blog</a>
@@ -44,7 +44,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="button-header">Subscribe</button>
+                    <a class="button button-header">Subscribe</a>
                 </div>
             </div>
         </div>
@@ -56,11 +56,12 @@
                     <div class="content">
                         <p class="sub-title">Posted on <strong>startup</strong></p>
                         <h1>Step-by-step guide to choosing great font pairs</h1>
-                        <p>By <span class="name">James West</span> | May 23, 2022 </p>
-                        <p class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        <address>By <span class="name">James West</span> | May 23, 2022 </address>
+                        <p class="text text-clamp">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu
                             fugiat nulla
                             pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        <button>Read More ></button>
+                        <a class="button" href="#">Read More ></a>
                     </div>
                 </div>
             </section>
@@ -70,12 +71,15 @@
                         <h2>Featured Post</h2>
                         <div class="item-box">
                             <img src="assets/images/white-concrete-building-1838640.png" alt="">
-                            <p class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </p>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </address>
+                            <h3 class="text-clamp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor.</h3>
+                            <p class="text-clamp">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu
+                                fugiat
                                 nulla
                                 pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <button>Read More ></button>
+                            <a class="button" href="#">Read More ></a>
                         </div>
                     </div>
                     <div class="placeholder-items">
@@ -86,26 +90,34 @@
                         <div class="items">
                             <a href="#" class="item-blog">
                                 <div class="block-blog">
-                                    <p class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </p>
-                                    <h3>8 Figma design systems that you can download for free today.</h3>
+                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
+                                    </address>
+                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
+                                    </h3>
                                 </div>
                             </a>
                             <a href="#" class="item-blog">
                                 <div class="block-blog">
-                                    <p class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </p>
-                                    <h3>8 Figma design systems that you can download for free today.</h3>
+                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
+                                    </address>
+                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
+                                    </h3>
                                 </div>
                             </a>
                             <a href="#" class="item-blog">
                                 <div class="block-blog">
-                                    <p class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </p>
-                                    <h3>8 Figma design systems that you can download for free today.</h3>
+                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
+                                    </address>
+                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
+                                    </h3>
                                 </div>
                             </a>
                             <a href="#" class="item-blog">
                                 <div class="block-blog">
-                                    <p class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </p>
-                                    <h3>8 Figma design systems that you can download for free today.</h3>
+                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
+                                    </address>
+                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
+                                    </h3>
                                 </div>
                             </a>
                         </div>
@@ -148,7 +160,7 @@
                         </a>
                         <a href="">
                             <div class="category-item">
-                                <img src="assets/images/icon-2.png"  alt="">
+                                <img src="assets/images/icon-2.png" alt="">
                                 <h3>Startup</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                             </div>
@@ -207,17 +219,17 @@
                         Subscribe to our news letter to get latest updates and news
                     </h2>
                     <div class="input-box">
-                        <form action="">
-                            <input type="text" placeholder="Enter Your Email">
-                            <button>Subscribe</button>
+                        <form action="submit">
+                            <input type="text" name="email" placeholder="Enter Your Email" required>
+                            <button type="submit" class="button">Subscribe</button>
                         </form>
                     </div>
                 </div>
                 <div class="footer-contacts">
-                    <div class="contact">
+                    <address class="contact">
                         <p>Finstreet 118 2561 Fintown</p>
                         <p>Hello@finsweet.com 020 7993 2905</p>
-                    </div>
+                    </address>
                     <div class="infor">
                         <nav>
                             <ul>

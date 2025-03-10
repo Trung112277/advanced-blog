@@ -36,7 +36,7 @@ li {
     list-style: none;
 }
 
-button {
+.button {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -48,7 +48,7 @@ button {
     width: fit-content;
 }
 
-button:hover {
+.button:hover {
     filter: brightness(80%);
 }
 
@@ -98,6 +98,10 @@ section {
     padding: 50px 0;
 }
 
+address {
+    font-style: normal;
+}
+
 .container {
     max-width: 1282px;
     margin: 0 auto;
@@ -120,6 +124,13 @@ section {
     font-weight: 500;
     font-size: 14px;
     color: var(--dark-grey);
+}
+
+.text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* header */
@@ -167,12 +178,12 @@ section {
     font-weight: 700;
 }
 
-.button-header {
+a.button-header {
     color: var(--black);
     background-color: var(--white);
 }
 
-.button-header:hover {
+a.button-header:hover {
     background-color: var(--yellow);
     color: var(--black);
 }
@@ -258,7 +269,8 @@ section {
     z-index: -1;
 }
 
-.jumbotron p {
+.jumbotron p,
+.jumbotron address {
     color: var(--white);
     margin: 25px 0;
     max-width: 600px;
@@ -294,6 +306,10 @@ section {
     padding: 25px;
 }
 
+.post-blog .placeholder {
+    max-width: 60%;
+}
+
 .placeholder .item-box {
     border: 1px solid var(--border-color);
     gap: 25px;
@@ -301,7 +317,7 @@ section {
 }
 
 .placeholder img {
-    width: 669px;
+    width: 100%;
 }
 
 .placeholder-items .all-post a {
@@ -325,7 +341,7 @@ section {
 .placeholder-items .item-blog .block-blog {
     padding: 30px;
     display: grid;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* end post-blog */
@@ -336,6 +352,27 @@ section {
     background-color: var(--lavender);
     display: flex;
     gap: 40px;
+    position: relative;
+}
+
+.about .content::after {
+    content: "";
+    width: 282px;
+    height: 23px;
+    background-color: var(--purple);
+    top: -23px;
+    right: 0;
+    position: absolute;
+}
+
+.about .content::before {
+    content: "";
+    width: 1061px;
+    height: 23px;
+    background-color: var(--yellow);
+    top: -23px;
+    right: 0;
+    position: absolute;
 }
 
 .about .content>* {
@@ -358,6 +395,10 @@ section {
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;
+}
+
+.about a:hover {
+    color: var(--yellow);
 }
 
 /* end about */
