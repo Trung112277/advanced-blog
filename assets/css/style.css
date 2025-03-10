@@ -133,6 +133,13 @@ address {
     overflow: hidden;
 }
 
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
 /* header */
 .header {
     background-color: var(--black);
@@ -436,3 +443,34 @@ a.button-header:hover {
     background-color: white;
 
 }
+
+/* end category */
+
+/* started */
+.started .content {
+    position: relative;
+}
+
+.started .bg-img {
+    max-width: 949px;
+    max-height: 705px;
+}
+
+.started .box-content {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--white);
+    padding: 60px;
+    max-width: 600px;
+    display: grid;
+    gap: 25px;
+}
+
+.started .box-content .sub-title {
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--black);
+}
+
+/* end started */
