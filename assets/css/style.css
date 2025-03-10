@@ -75,6 +75,28 @@ h3 {
     line-height: 40px;
 }
 
+h4 {
+    font-size: 24px;
+    color: var(--black);
+    line-height: 32px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 20px;
+    color: var(--black);
+    line-height: 32px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 18px;
+    color: var(--black);
+    line-height: 24px;
+    font-weight: 700;
+}
+
+
 input {
     border: none;
     font-size: 16px;
@@ -498,6 +520,25 @@ a.button-header:hover {
 .list-item .avatar {
     width: 128px;
     height: 128px;
+    border-radius: 50%;
 }
 
 /*end list-authors */
+
+/* logo component */
+.logo-component .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-component p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.logo-component .text-box {
+    width: fit-content;
+}
+
+/*end logo component */
