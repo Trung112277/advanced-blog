@@ -463,10 +463,22 @@ address {
     border: none;
     cursor: pointer;
     width: fit-content;
+    position: relative;
 }
 
-.button:hover {
-    filter: brightness(80%);
+.button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.157);
+    transition:  0.3s all ease-in-out;
+}
+
+.button:hover:after {
+    width: 100%;
 }
 
 .border-rdu-50 {
