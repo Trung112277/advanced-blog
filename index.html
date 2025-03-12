@@ -21,407 +21,409 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="navbar container">
-                <div class="logo">
-                    <a href="index.html">&#123;Finsweet</a>
-                </div>
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a aria-label="Home" href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="">Blog</a>
-                            </li>
-                            <li>
-                                <a href="">About Us</a>
-                            </li>
-                            <li>
-                                <a href="">Contact Us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a class="button button-header">Subscribe</a>
-                </div>
+    <header class="header bg-black fixed-top">
+        <div class="container row-between h-80">
+            <div>
+                <a class="logo text-white hover-yellow" href="index.html">&#123;Finsweet</a>
             </div>
+            <nav>
+                <ul class="flex gap-30">
+                    <li>
+                        <a aria-label="Home" class="text-white hover-yellow" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a aria-label="Blog" class="text-white hover-yellow" href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a aria-label="About Us" class="text-white hover-yellow" href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a aria-label="Contact Us" class="text-white hover-yellow" href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="button button-header bg-white">Subscribe</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <main>
-        <div class="main">
-            <section class="jumbotron">
-                <div class="container">
-                    <div class="content">
-                        <p class="sub-title">Posted on <strong>startup</strong></p>
-                        <h1>Step-by-step guide to choosing great font pairs</h1>
-                        <address>By <span class="name">James West</span> | May 23, 2022 </address>
-                        <p class="text text-clamp">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+    <main class="main mg-top-80 mg-bot-50">
+        <section class="jumbotron relative">
+            <div class="container text-white pad-top-50 pad-bot-150">
+                <p class="sub-title">Posted on <strong>startup</strong></p>
+                <h1 class="display">Step-by-step guide to choosing <br> great font pairs</h1>
+                <address class="mg-20">By <span class="text-yellow">James West</span> | <time datetime="2022-5-23">May
+                        23, 2022</time>
+                </address>
+                <p class="clamp clamp-row-2">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum
+                    dolore eu <br>
+                    fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <div class="mg-top-80">
+                    <a class="button text-black bg-yellow " href="#">Read More ></a>
+                </div>
+            </div>
+        </section>
+        <section class="posts-blog">
+            <div class="container flex gap-30 baseline">
+                <div class="w-60">
+                    <h2>Featured Post</h2>
+                    <article class="border pad-30">
+                        <img class="w-100" src="assets/images/white-concrete-building-1838640.png"
+                            alt="White concrete building">
+                        <address class="blog-card mg-25 ">By <span class="text-purple">John Doe</span> |
+                            <time datetime="2022-5-23">May
+                                23, 2022</time>
+                        </address>
+                        <h3 class="mg-25 clamp clamp-row-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor.</h3>
+                        <p class="text-grey clamp clamp-row-2 mg-25">Duis aute irure dolor in reprehenderit in voluptate
+                            velit
+                            esse cillum
                             dolore eu
-                            fugiat nulla
+                            fugiat
+                            nulla
                             pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        <a class="button" href="#">Read More ></a>
-                    </div>
+                        <div class="mg-top-80 mg-bot-25">
+                            <a class="button text-black bg-yellow" href="#">Read More ></a>
+                        </div>
+                    </article>
                 </div>
-            </section>
-            <section class="post-blog">
-                <div class="content container">
-                    <div class="placeholder">
-                        <h2>Featured Post</h2>
-                        <div class="item-box">
-                            <img src="assets/images/white-concrete-building-1838640.png" alt="White concrete building">
-                            <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022 </address>
-                            <h3 class="text-clamp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor.</h3>
-                            <p class="text-clamp">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu
-                                fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <a class="button" href="#">Read More ></a>
-                        </div>
+                <div class="w-40">
+                    <div class="baseline row-between">
+                        <h2>All Posts</h2>
+                        <a href="#" class="text-purple">View All</a>
                     </div>
-                    <div class="placeholder-items">
-                        <div class="all-post">
-                            <h2>All Posts</h2>
-                            <a href="#">View All</a>
-                        </div>
-                        <div class="items">
-                            <a href="#" class="item-blog">
-                                <div class="block-blog">
-                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
-                                    </address>
-                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
-                                    </h3>
-                                </div>
+                    <div>
+                        <article class="hover-bg-yellow-2 pad-30">
+                            <a href="#">
+                                <address class="blog-card ">By <span class="text-purple">John
+                                        Doe</span> | <time datetime="2021-8-23">Aug
+                                        23, 2021</time>
+                                </address>
+                                <h3 class="clamp clamp-row-3 mg-0">8 Figma design systems that you can download for free
+                                    today.
+                                </h3>
                             </a>
-                            <a href="#" class="item-blog">
-                                <div class="block-blog">
-                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
-                                    </address>
-                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
-                                    </h3>
-                                </div>
+                        </article>
+                        <article class="hover-bg-yellow-2 pad-30">
+                            <a href="#">
+                                <address class="blog-card ">By <span class="text-purple">John
+                                        Doe</span> | <time datetime="2021-8-23">Aug
+                                        23, 2021</time>
+                                </address>
+                                <h3 class="clamp clamp-row-3 mg-0">8 Figma design systems that you can download for free
+                                    today.
+                                </h3>
                             </a>
-                            <a href="#" class="item-blog">
-                                <div class="block-blog">
-                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
-                                    </address>
-                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
-                                    </h3>
-                                </div>
+                        </article>
+                        <article class="hover-bg-yellow-2 pad-30">
+                            <a href="#">
+                                <address class="blog-card ">By <span class="text-purple">John
+                                        Doe</span> | <time datetime="2021-8-23">Aug
+                                        23, 2021</time>
+                                </address>
+                                <h3 class="clamp clamp-row-3 mg-0">8 Figma design systems that you can download for free
+                                    today.
+                                </h3>
                             </a>
-                            <a href="#" class="item-blog">
-                                <div class="block-blog">
-                                    <address class="blog-card">By <span class="name">John Doe</span> | May 23, 2022
-                                    </address>
-                                    <h3 class="text-clamp">8 Figma design systems that you can download for free today.
-                                    </h3>
-                                </div>
+                        </article>
+                        <article class="hover-bg-yellow-2 pad-30">
+                            <a href="#">
+                                <address class="blog-card ">By <span class="text-purple">John
+                                        Doe</span> | <time datetime="2021-8-23">Aug
+                                        23, 2021</time>
+                                </address>
+                                <h3 class="clamp clamp-row-3 mg-0">8 Figma design systems that you can download for free
+                                    today.
+                                </h3>
                             </a>
-                        </div>
+                        </article>
                     </div>
                 </div>
-            </section>
-            <section class="about">
-                <div class="container">
-                    <div class="content">
-                        <div class="box-item">
-                            <p class="sub-title">ABOUT US</p>
-                            <h3 class="text-clamp">We are a community of content writers who share their learnings</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                            <a href="#">Read More ></a>
-                        </div>
-                        <div class="box-item">
-                            <p class="sub-title">Our mision</p>
-                            <h3 class="text-clamp">Creating valuable content for creatives all around the world</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container line relative bg-lavender">
+                <div class="pad-100 flex baseline">
+                    <div class="w-50 pad-r-25">
+                        <p class="sub-title">ABOUT US</p>
+                        <h2 class="clamp clamp-row-3">We are a community of content writers who share their learnings
+                        </h2>
+                        <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt
+                            ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#" class="text-purple">Read More ></a>
+                    </div>
+                    <div class="w-50 pad-l-25">
+                        <p class="sub-title">Our mision</p>
+                        <h3 class="clamp clamp-row-3">Creating valuable content for creatives all around the world</h3>
+                        <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt
+                            ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
-            </section>
-            <section class="category">
-                <div class="content container">
-                    <h2>Choose A Catagory</h2>
-                    <div class="category-box list-4">
-                        <a href="">
-                            <div class="category-item">
-                                <img src="assets/images/icon-1.png" alt="">
-                                <h3>Business</h3>
-                                <p class="text-clamp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="category-item">
-                                <img src="assets/images/icon-2.png" alt="">
-                                <h3>Startup</h3>
-                                <p class="text-clamp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="category-item">
-                                <img src="assets/images/icon-3.png" alt="">
-                                <h3>Economy</h3>
-                                <p class="text-clamp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="category-item">
-                                <img src="assets/images/icon-4.png" alt="">
-                                <h3>Technology</h3>
-                                <p class="text-clamp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                            </div>
-                        </a>
+            </div>
+        </section>
+        <section class="category">
+            <div class="container">
+                <h2 class="center">Choose A Catagory</h2>
+                <div class="grid grid-cols-4 gap-30">
+                    <a href="#" class="border border-hover-yellow">
+                        <div class="hover-bg-yellow pad-30">
+                            <img src="assets/images/icon-1.png" alt="icon" class="border-rdu-10 bg-light-yellow">
+                            <h3 class="mg-0">Business</h3>
+                            <p class="clamp clamp-row-2 text-grey">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="border border-hover-yellow">
+                        <div class="hover-bg-yellow pad-30">
+                            <img src="assets/images/icon-2.png" alt="icon" class="border-rdu-10 bg-light-yellow">
+                            <h3 class="mg-0">Startup</h3>
+                            <p class="clamp  clamp-row-2 text-grey">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="border border-hover-yellow">
+                        <div class="hover-bg-yellow pad-30">
+                            <img src="assets/images/icon-3.png" alt="icon" class="border-rdu-10 bg-light-yellow">
+                            <h3 class="mg-0">Economy</h3>
+                            <p class="clamp  clamp-row-2 text-grey">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="border border-hover-yellow">
+                        <div class="hover-bg-yellow pad-30">
+                            <img src="assets/images/icon-4.png" alt="icon" class="border-rdu-10 bg-light-yellow">
+                            <h3 class="mg-0">Technology</h3>
+                            <p class="clamp clamp-row-2 text-grey">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                elit.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="started">
+            <div class="container relative">
+                <div>
+                    <img class="" src="assets/images/close-up-photography-of-man-wearing-sunglasses-1212984.png"
+                        alt="close up photography of man wearing sunglasses">
+                </div>
+                <div class="pad-80 bg-white absolute bot-right w-550">
+                    <p class="sub-title">Why we started</p>
+                    <h2 class="heading">It started out as a simple idea and evolved into our passion</h2>
+                    <p class="text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco
+                        laboris nisi ut aliquip.</p>
+                    <div class="mg-top-50">
+                        <a href="" class="button button text-black bg-yellow ">Discover our story ></a>
                     </div>
                 </div>
-            </section>
-            <section class="started">
-                <div class="container">
-                    <div class="content">
-                        <div class="box-img"><img class="bg-img"
-                                src="assets/images/close-up-photography-of-man-wearing-sunglasses-1212984.png"
-                                alt="close up photography of man wearing sunglasses"></div>
-                        <div class="box-content">
-                            <p class="sub-title">Why we started</p>
-                            <h2 class="heading">It started out as a simple idea and evolved into our passion</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi ut aliquip.</p>
-                            <a href="" class="button">Discover our story ></a>
-                        </div>
+            </div>
+        </section>
+        <section class="list-authors">
+            <div class="container center">
+                <h2>List of Authors</h2>
+                <div class="grid grid-cols-4 gap-30">
+                    <div class="bg-light-grey hover-bg-yellow-2 pad-30">
+                        <img src="assets/images/man-in-yellow-button-up-shirt-wearing-black-framed-eyeglasses-7562313.png"
+                            alt="avatar" class="border-rdu-50 mg-bot-25">
+                        <h3 class="mg-0">Floyd Miles</h3>
+                        <p class="text-grey mg-0">Content Writer @Company</p>
+                        <nav class="mg-top-20">
+                            <ul class="row-center gap-20">
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""> <i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bg-light-grey hover-bg-yellow-2 pad-30">
+                        <img src="assets/images/woman-in-white-and-black-striped-shirt-wearing-black-sunglasses-3671083.png"
+                            alt="avatar" class="border-rdu-50 mg-bot-25">
+                        <h3 class="mg-0">Dianne Russell</h3>
+                        <p class="text-grey mg-0">Content Writer @Company</p>
+                        <nav class="mg-top-20">
+                            <ul class="row-center gap-20">
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""> <i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bg-light-grey hover-bg-yellow-2 pad-30">
+                        <img src="assets/images/fashion-woman-cute-shoes-5704849.png" alt="avatar"
+                            class="border-rdu-50 mg-bot-25">
+                        <h3 class="mg-0">Jenny Wilson</h3>
+                        <p class="text-grey mg-0">Content Writer @Company</p>
+                        <nav class="mg-top-20">
+                            <ul class="row-center gap-20">
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""> <i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="bg-light-grey hover-bg-yellow-2 pad-30">
+                        <img src="assets/images/content-baker-with-delicious-puff-in-cafeteria-6205509.png" alt="avatar"
+                            class="border-rdu-50 mg-bot-25">
+                        <h3 class="mg-0">Leslie Alexander</h3>
+                        <p class="text-grey mg-0">Content Writer @Company</p>
+                        <nav class="mg-top-20">
+                            <ul class="row-center gap-20">
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""><i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a class="text-black hover-yellow" href=""> <i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </section>
-            <section class="list-authors">
-                <div class="content container">
-                    <h2>List of Authors</h2>
-                    <div class="list-box list-4">
-                        <div class="list-item">
-                            <img src="assets/images/man-in-yellow-button-up-shirt-wearing-black-framed-eyeglasses-7562313.png"
-                                alt="avatar" class="avatar">
-                            <h3>Floyd Miles</h3>
-                            <p>Content Writer @Company</p>
-                            <div class="infor">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="list-item">
-                            <img src="assets/images/woman-in-white-and-black-striped-shirt-wearing-black-sunglasses-3671083.png"
-                                alt="avatar" class="avatar">
-                            <h3>Dianne Russell</h3>
-                            <p>Content Writer @Company</p>
-                            <div class="infor">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="list-item">
-                            <img src="assets/images/fashion-woman-cute-shoes-5704849.png" alt="avatar" class="avatar">
-                            <h3>Jenny Wilson</h3>
-                            <p>Content Writer @Company</p>
-                            <div class="infor">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="list-item">
-                            <img src="assets/images/content-baker-with-delicious-puff-in-cafeteria-6205509.png"
-                                alt="avatar" class="avatar">
-                            <h3>Leslie Alexander</h3>
-                            <p>Content Writer @Company</p>
-                            <div class="infor">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                    </div>
+            </div>
+        </section>
+        <section class="logo-component">
+            <div class="container flex gap-30">
+                <div class="w-200">
+                    <p class="mg-0 text-grey">We are</p>
+                    <h4 class="mg-0 text-grey">Featured in</h4>
                 </div>
-            </section>
-            <section class="logo-component">
-                <div class="content container">
-                    <div class="text-box">
-                        <p>We are</p>
-                        <h4>Featured in</h4>
-                    </div>
-                    <div class="logo-box">
+                <div class="row-between w-100">
+                    <div>
                         <img src="assets/images/logo-1.png" alt="logo">
                     </div>
-                    <div class="logo-box">
+                    <div>
                         <img src="assets/images/logo-2.png" alt="logo">
                     </div>
-                    <div class="logo-box">
+                    <div>
                         <img src="assets/images/logo-3.png" alt="logo">
 
                     </div>
-                    <div class="logo-box">
+                    <div>
                         <img src="assets/images/logo-4.png" alt="logo">
                     </div>
-                    <div class="logo-box">
+                    <div>
                         <img src="assets/images/logo-5.png" alt="logo">
                     </div>
                 </div>
-            </section>
-            <section class="testimonials">
-                <div class="container">
-                    <div class="content">
-                        <div class="box-left">
-                            <p class="sub-title">TESTIMONIALs</p>
-                            <h2>What people say about our blog</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                        </div>
-                        <div class="box-right">
-                            <div class="user">
-                                <h4 class="user-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                                <div class="profile">
-                                    <img src="assets/images/profile-picture.png" alt="avatar" class="avatar">
-                                    <div class="address-box">
-                                        <h4 class="name">Jonathan Vallem</h4>
-                                        <address>New york, USA</address>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="arrow">
-                                <button class="previous"><i class="fa-solid fa-arrow-left-long"></i></button>
-                                <button class="next button-active"><i class="fa-solid fa-arrow-right-long"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
+        
     </main>
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="navbar">
-                    <div class="logo">
-                        <a href="index.html">&#123;Finsweet</a>
-                    </div>
-                    <div class="menu">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="">Privacy Policy</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+    <footer class="footer bg-black">
+        <div class="container">
+            <div class="row-between pad-bot-25">
+                <div>
+                    <a class="logo text-white hover-yellow" href="index.html">&#123;Finsweet</a>
                 </div>
-                <div class="footer-input">
-                    <h2>
-                        Subscribe to our news letter to get latest updates and news
-                    </h2>
-                    <div class="input-box">
-                        <form action="submit">
-                            <input type="text" name="email" placeholder="Enter Your Email" required>
-                            <button type="submit" class="button">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-contacts">
-                    <address class="contact">
-                        <p>Finstreet 118 2561 Fintown</p>
-                        <p>Hello@finsweet.com 020 7993 2905</p>
-                    </address>
-                    <div class="infor">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""> <i class="fa-brands fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                <nav>
+                    <ul class="flex gap-30">
+                        <li>
+                            <a aria-label="Home" class="text-white hover-yellow" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a aria-label="Blog" class="text-white hover-yellow" href="">Blog</a>
+                        </li>
+                        <li>
+                            <a aria-label="About Us" class="text-white hover-yellow" href="">About Us</a>
+                        </li>
+                        <li>
+                            <a aria-label="Contact Us" class="text-white hover-yellow" href="">Contact Us</a>
+                        </li>
+                        <li>
+                            <a aria-label="Privacy Policy" class="text-white hover-yellow" href="">Privacy
+                                Policy</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row-between pad-100 bg-dark-grey mg-50 gap-30">
+                <h2 class="mg-0 text-white ">
+                    Subscribe to our news letter to get latest updates and news
+                </h2>
+                <form action="submit" class=" gap-20 flex">
+                    <input type="text" name="email" placeholder="Enter Your Email" required
+                        class="bg-dark-grey text-white">
+                    <button type="submit" class="button bg-yellow">Subscribe</button>
+                </form>
+            </div>
+            <div class="row-between pad-top-25">
+                <address class="text-grey">
+                    <p class="mg-0">Finstreet 118 2561 Fintown</p>
+                    <p class="mg-0">Hello@finsweet.com 020 7993 2905</p>
+                </address>
+                <nav>
+                    <ul class="row-between gap-20">
+                        <li>
+                            <a href="" class="text-grey hover-yellow"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="" class="text-grey hover-yellow"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="" class="text-grey hover-yellow"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="" class="text-grey hover-yellow"> <i class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </footer>
