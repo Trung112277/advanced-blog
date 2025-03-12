@@ -14,6 +14,16 @@
     --color-grey-5: #4C4C4C;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* BASE STYLES */
 * {
     transition: all 0.3s ease-in-out;
@@ -175,6 +185,10 @@ address {
 
 .stretch {
     align-items: stretch;
+}
+
+.hidden {
+    overflow: hidden;
 }
 
 .fixed-top {
@@ -474,7 +488,7 @@ address {
     width: 0%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.157);
-    transition:  0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 
 .button:hover:after {
@@ -536,6 +550,15 @@ address {
     top: -23px;
     right: 0;
     position: absolute;
+}
+
+.slider-track {
+    width: calc(200px * 10);
+    animation: scroll 10s linear infinite;
+}
+
+.slider-slide {
+    width: 200px;
 }
 
 /* COMPONENTS */
