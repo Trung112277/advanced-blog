@@ -147,8 +147,13 @@ address {
 
 .flex {
     display: flex;
-    flex-direction: row;
     align-items: center;
+}
+
+.col-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .row-between {
@@ -183,6 +188,10 @@ address {
     align-items: baseline;
 }
 
+.flex-start {
+    align-items: flex-start;
+}
+
 .stretch {
     align-items: stretch;
 }
@@ -211,7 +220,9 @@ address {
     bottom: 0;
     right: 0;
 }
-
+.h-100 {
+    height: 100%;
+}
 .h-80 {
     height: 80px;
 }
@@ -388,6 +399,10 @@ address {
     -webkit-line-clamp: 3;
 }
 
+.clamp-row-4 {
+    -webkit-line-clamp: 4;
+}
+
 .bg-black {
     background-color: var(--color-black);
 }
@@ -559,6 +574,32 @@ address {
 
 .slider-slide {
     width: 200px;
+}
+
+.slides {
+    width: 100%;
+    height: 250px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.prev {
+    transform: translateX(-100%);
+}
+
+.slide.next {
+    transform: translateX(100%);
 }
 
 /* COMPONENTS */
