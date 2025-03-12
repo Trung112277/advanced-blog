@@ -386,6 +386,30 @@ address {
 .pad-l-100 {
     padding-left: 100px;
 }
+.face{
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.face-left {
+    transform: translateX(-100%);
+}
+
+.face-right {
+    transform: translateX(100%);
+}
+
+.face-top {
+    transform: translateY(-100%);
+}
+.face-bot {
+    transform: translateY(100%);
+}
+
+.face.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
 
 
 /* UTILITIES */

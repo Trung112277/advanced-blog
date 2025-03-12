@@ -60,3 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
         autoSlideInterval = setInterval(nextSlide, 2000); // Bắt đầu lại interval
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const faceImages = document.querySelectorAll('.face');
+
+    const checkVisibility = () => {
+        const triggerOffset = 50; // Khoảng cách kích hoạt sớm hơn (px)
+
+        faceImages.forEach((image) => {
+            const imageTop = image.getBoundingClientRect().top;
+            const imageBottom = image.getBoundingClientRect().bottom;
+
+            // Kiểm tra nếu hình ảnh gần đến viewport (sớm hơn 50px)
+            if (imageTop < window.innerHeight - triggerOffset && imageBottom > triggerOffset && !image.classList.contains('visible')) {
+                image.classList.add('visible');
+            }
+        });
+    };
+
+    // Kích hoạt khi cuộn trang
+    window.addEventListener('scroll', checkVisibility);
+
+    // Kiểm tra ngay khi trang được tải
+    checkVisibility();
+});
