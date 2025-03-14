@@ -83,3 +83,99 @@ document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra ngay khi trang được tải
     checkVisibility();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const postsContainer = document.getElementById('posts-container');
+    const pageNumbers = document.querySelector('.page-numbers');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const posts = document.querySelectorAll('.col-between .flex');
+    const postsPerPage = 5; // Số bài viết hiển thị trên mỗi trang
+    let currentPage = 1;
+
+    // Lấy trang hiện tại từ URL (nếu có)
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#page=')) {
+        const page = parseInt(hash.split('=')[1], 10);
+        if (!isNaN(page)) { // Sửa lỗi ở đây
+            currentPage = page;
+        }
+    }
+
+    // Hiển thị bài viết theo trang
+    function showPosts(page) {
+        const start = (page - 1) * postsPerPage;
+        const end = start + postsPerPage;
+
+        posts.forEach((post, index) => {
+            if (index >= start && index < end) {
+                post.style.display = 'flex'; // Hiển thị bài viết
+            } else {
+                post.style.display = 'none'; // Ẩn bài viết
+            }
+        });
+    }
+
+    // Cập nhật phân trang
+    function updatePagination() {
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        pageNumbers.innerHTML = ''; // Xóa nội dung cũ
+
+        // Tạo các thẻ span cho từng trang
+        for (let i = 1; i <= totalPages; i++) {
+            const span = document.createElement('span');
+            span.textContent = i;
+            span.classList.add('page-number');
+            span.classList.add('hover-yellow');
+            if (i === currentPage) {
+                span.classList.add('active');
+                span.classList.add('relative'); // Thêm class active cho trang hiện tại
+            }
+            span.addEventListener('click', () => {
+                currentPage = i;
+                updateURL(); // Cập nhật URL
+                showPosts(currentPage);
+                updatePagination();
+            });
+            pageNumbers.appendChild(span);
+        }
+
+        // Cập nhật trạng thái nút Previous và Next
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+
+        // Thêm class 'disabled' để làm nhạt màu nút
+        prevButton.classList.toggle('disabled', currentPage === 1);
+        nextButton.classList.toggle('disabled', currentPage === totalPages);
+    }
+
+    // Cập nhật URL với trang hiện tại
+    function updateURL() {
+        window.location.hash = `post-page=${currentPage}`;
+    }
+
+    // Sự kiện nút Previous
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            updateURL(); // Cập nhật URL
+            showPosts(currentPage);
+            updatePagination();
+        }
+    });
+
+    // Sự kiện nút Next
+    nextButton.addEventListener('click', () => {
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            updateURL(); // Cập nhật URL
+            showPosts(currentPage);
+            updatePagination();
+        }
+    });
+
+    // Hiển thị bài viết đầu tiên khi trang được tải
+    showPosts(currentPage);
+    updatePagination();
+});

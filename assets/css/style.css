@@ -370,6 +370,7 @@ address {
 .pad-top-50 {
     padding-top: 50px;
 }
+
 .pad-bot-50 {
     padding-bottom: 50px;
 }
@@ -393,7 +394,8 @@ address {
 .pad-l-100 {
     padding-left: 100px;
 }
-.face{
+
+.face {
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
@@ -409,6 +411,7 @@ address {
 .face-top {
     transform: translateY(-100%);
 }
+
 .face-bot {
     transform: translateY(100%);
 }
@@ -456,6 +459,10 @@ address {
 
 .clamp-row-4 {
     -webkit-line-clamp: 4;
+}
+
+.bg-transparent {
+    background-color: transparent;
 }
 
 .bg-black {
@@ -516,6 +523,10 @@ address {
 
 .hover-yellow:hover {
     color: var(--color-yellow-1);
+}
+
+.hover-purple:hover {
+    color: var(--color-purple);
 }
 
 .hover-white:hover {
@@ -588,6 +599,10 @@ address {
 
 .border {
     border: 1px solid var(--color-grey-1);
+}
+
+.border-bot {
+    border-bottom: 1px solid var(--color-grey-1);
 }
 
 .border-left {
@@ -697,4 +712,35 @@ address {
 
 .slide.next {
     transform: translateX(100%);
+}
+
+.pagination button.disabled h3 {
+    color: var(--color-grey-1);
+    cursor: not-allowed;
+}
+
+.page-number {
+    font-weight: 700;
+    color: var(--color-black);
+    margin-top: 0;
+    font-size: 28px;
+    line-height: 40px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.page-number.active {
+    color: var(--color-yellow-1);
+}
+
+.page-number.active::before {
+    content: "";
+    width: 100%;
+    background-color: var(--color-yellow-1);
+    position: absolute;
+    height: 3px;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
 }
