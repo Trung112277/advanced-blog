@@ -242,6 +242,10 @@ address {
     position: absolute;
 }
 
+.cover {
+    object-fit: cover;
+}
+
 .bot-right {
     bottom: 0;
     right: 0;
@@ -641,6 +645,24 @@ address {
     animation: shake 1s;
 }
 
+.bg-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
 /* COMPONENTS */
 .header a {
     font-family: "Inter";
@@ -650,20 +672,10 @@ address {
     padding: 70px 0;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: url(/advanced-blog/assets/images/bg-1.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(50%);
-    z-index: -1;
+.hero {
+    height: 720px;
 }
+
 
 .about-us a {
     font-size: 18px;
