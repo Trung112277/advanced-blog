@@ -181,9 +181,18 @@ address {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .flex {
     display: flex;
     align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
 }
 
 .col-between {
@@ -331,6 +340,9 @@ address {
 
 .mg-top-50 {
     margin-top: 50px;
+}
+.mg-top-auto {
+    margin-top: auto;
 }
 
 .mg-bot-25 {
@@ -619,9 +631,7 @@ address {
     width: 100%;
 }
 
-.border-rdu-50 {
-    border-radius: 50%;
-}
+
 
 .heading {
     font-size: 48px;
@@ -638,6 +648,9 @@ address {
 
 .border-rdu-10 {
     border-radius: 10px;
+}
+.border-rdu-50 {
+    border-radius: 50%;
 }
 
 .border {
