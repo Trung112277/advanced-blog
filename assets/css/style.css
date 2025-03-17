@@ -549,6 +549,10 @@ address {
     background-color: var(--color-yellow-2);
 }
 
+.hover-scale:hover {
+    transform: scale(1.2);
+}
+
 .font-30 {
     font-size: 25px;
 }
