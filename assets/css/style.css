@@ -1,6 +1,7 @@
 /* CSS VARIABLES */
 :root {
     --color-black: #232536;
+    --color-black-2: #161722;
     --color-yellow-1: #FFD050;
     --color-grey-1: #6D6E76;
     --color-purple: #592EA9;
@@ -83,7 +84,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
     font-weight: 700;
     color: var(--color-black);
     margin-top: 0;
@@ -97,6 +99,7 @@ h1 {
 h2 {
     font-size: 36px;
     line-height: 48px;
+    letter-spacing: -2px;
 }
 
 h3 {
@@ -117,6 +120,12 @@ h5 {
 h6 {
     font-size: 18px;
     line-height: 24px;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -2px;
 }
 
 button {
@@ -156,6 +165,11 @@ address {
 /* LAYOUT  */
 .container {
     max-width: 1282px;
+    margin: 0 auto;
+}
+
+.small-container {
+    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -204,6 +218,10 @@ address {
 
 .gap-20 {
     gap: 20px;
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 .center {
@@ -359,21 +377,26 @@ address {
     padding: 80px;
 }
 
-.pad-bot-25 {
-    padding-bottom: 25px;
+.pad-100 {
+    padding: 100px;
 }
 
 .pad-top-25 {
     padding-top: 25px;
 }
 
-.pad-100 {
-    padding: 100px;
-}
-
 .pad-top-50 {
     padding-top: 50px;
 }
+
+.pad-top-80 {
+    padding-top: 80px;
+}
+
+.pad-bot-25 {
+    padding-bottom: 25px;
+}
+
 
 .pad-bot-50 {
     padding-bottom: 50px;
@@ -525,6 +548,10 @@ address {
     color: var(--color-black);
 }
 
+.text-black-2 {
+    color: var(--color-black-2);
+}
+
 .text-grey {
     color: var(--color-grey-1);
 }
@@ -673,6 +700,11 @@ address {
     right: 0;
     background-color: black;
     opacity: 0.5;
+}
+
+.list {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 /* COMPONENTS */
