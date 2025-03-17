@@ -501,6 +501,14 @@ address {
     background-color: var(--color-grey-2);
 }
 
+.font-inter {
+    font-family: "Inter";
+}
+
+.font-sen {
+    font-family: "Sen";
+}
+
 .text-purple {
     color: var(--color-purple);
 }
