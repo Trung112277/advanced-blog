@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibility();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const postsContainer = document.getElementById('posts-container');
     const pageNumbers = document.querySelector('.page-numbers');
     const prevButton = document.querySelector('.prev');
@@ -178,4 +178,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hiển thị bài viết đầu tiên khi trang được tải
     showPosts(currentPage);
     updatePagination();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / 100; // Điều chỉnh tốc độ tăng
+        let count = 0;
+
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
 });
