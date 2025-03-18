@@ -475,6 +475,10 @@ address {
     padding-right: 100px;
 }
 
+.pad-l-50 {
+    padding-left: 50px;
+}
+
 .pad-l-100 {
     padding-left: 100px;
 }
@@ -771,9 +775,25 @@ address {
     background-color: var(--color-yellow-1);
     border-top-left-radius: 50%;
 }
-.deco-1-top-left::before{
+
+.deco-1-top-left::before {
     top: 114px;
     left: -54px;
+}
+
+.deco-2::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 74px;
+    height: 74px;
+    background-color: var(--color-purple);
+    border-radius: 50%;
+}
+
+.deco-2-bot-left::before {
+    bottom: -37px;
+    left: 107px;
 }
 
 .shake:hover {
