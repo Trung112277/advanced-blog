@@ -184,7 +184,8 @@ address {
 .grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
 }
-.block{
+
+.block {
     display: block;
 }
 
@@ -759,6 +760,20 @@ address {
 
 .line-w-900::before {
     width: 900px;
+}
+
+.deco-1::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 103px;
+    height: 116px;
+    background-color: var(--color-yellow-1);
+    border-top-left-radius: 50%;
+}
+.deco-1-top-left::before{
+    top: 114px;
+    left: -54px;
 }
 
 .shake:hover {
