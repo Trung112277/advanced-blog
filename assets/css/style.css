@@ -173,6 +173,10 @@ address {
     margin: 0 auto;
 }
 
+.none {
+    display: none;
+}
+
 .grid {
     display: grid;
 }
@@ -696,6 +700,7 @@ address {
 .hover-white:hover {
     color: var(--color-white);
 }
+
 .hover-black:hover {
     color: var(--color-black);
 }
@@ -788,7 +793,6 @@ address {
 
 .border-rdu-50 {
     border-radius: 50%;
-    width: calc(50% - 20px);
 }
 
 .border-rdu {
@@ -1001,6 +1005,7 @@ address {
 
 .page-number.active {
     color: var(--color-yellow-1);
+    position: relative;
 }
 
 .page-number.active::before {

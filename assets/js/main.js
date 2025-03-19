@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageNumbers = document.querySelector('.page-numbers');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
-    const posts = document.querySelectorAll('.col-between .flex');
+    const posts = document.querySelectorAll('.posts');
     const postsPerPage = 5; // Số bài viết hiển thị trên mỗi trang
     let currentPage = 1;
 
@@ -200,4 +200,160 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateCount();
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const bannerTitle = document.querySelector('.banner h1');
+    const articlesContainer = document.querySelector('#category-container');
+    const pagination = document.querySelector('.pagination');
+    const categoryButtons = document.querySelectorAll('.button-category');
+    const postsPerPage = 4; // Số bài viết hiển thị trên mỗi trang
+    let currentCategory = 'startup'; // Category mặc định
+    let currentPage = 1;
+
+    // Đảm bảo các nút category luôn hiển thị
+    categoryButtons.forEach(button => {
+        button.style.display = 'flex'; // Hoặc 'block', tùy thuộc vào layout của bạn
+    });
+
+    // Hàm hiển thị bài viết theo category và trang
+    function showPosts(category, page) {
+        const articles = document.querySelectorAll(`#${category} article`);
+        const start = (page - 1) * postsPerPage;
+        const end = start + postsPerPage;
+
+        // Ẩn tất cả bài viết
+        document.querySelectorAll('.categories article').forEach(article => {
+            article.style.display = 'none';
+        });
+
+        // Hiển thị bài viết trong phạm vi trang hiện tại
+        articles.forEach((article, index) => {
+            if (index >= start && index < end) {
+                article.style.display = 'flex';
+            }
+        });
+
+        // Hiển thị hoặc ẩn phân trang
+        if (articles.length > postsPerPage) {
+            pagination.style.display = 'flex';
+        } else {
+            pagination.style.display = 'none';
+        }
+    }
+
+    // Hàm cập nhật Breadcrumb
+    function updateBreadcrumb(category) {
+        const breadcrumb = document.querySelector('.banner nav ul li:last-child a');
+        breadcrumb.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+        // Thêm sự kiện click cho Breadcrumb
+        breadcrumb.addEventListener('click', (e) => {
+            e.preventDefault(); // Ngăn chặn tải lại trang
+            handleCategoryClick(category); // Chuyển đến category tương ứng
+        });
+    }
+
+    // Hàm cập nhật phân trang
+    function updatePagination(category) {
+        const articles = document.querySelectorAll(`#${category} article`);
+        const totalPages = Math.ceil(articles.length / postsPerPage);
+        const pageNumbers = document.querySelector('.page-numbers');
+        pageNumbers.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const span = document.createElement('span');
+            span.textContent = i;
+            span.classList.add('page-number');
+            if (i === currentPage) {
+                span.classList.add('active');
+            }
+            span.addEventListener('click', () => {
+                currentPage = i;
+                updateURL();
+                showPosts(currentCategory, currentPage);
+                updatePagination(currentCategory);
+            });
+            pageNumbers.appendChild(span);
+        }
+
+        // Cập nhật trạng thái nút Previous và Next
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+
+        // Thêm class 'disabled' để làm nhạt màu nút
+        prevButton.classList.toggle('disabled', currentPage === 1);
+        nextButton.classList.toggle('disabled', currentPage === totalPages);
+    }
+
+    // Hàm cập nhật URL
+    function updateURL() {
+        const url = new URL(window.location);
+        url.searchParams.set('category', currentCategory);
+        url.searchParams.set('page', currentPage);
+        window.history.pushState({}, '', url);
+    }
+
+    // Hàm xử lý khi chọn category
+    function handleCategoryClick(category) {
+        currentCategory = category;
+        currentPage = 1;
+
+        // Cập nhật tiêu đề và Breadcrumb
+        bannerTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        updateBreadcrumb(category);
+
+        // Hiển thị bài viết và cập nhật phân trang
+        showPosts(currentCategory, currentPage);
+        updatePagination(currentCategory);
+        updateURL();
+    }
+
+    // Lắng nghe sự kiện click trên các nút category
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.querySelector('h3').textContent.toLowerCase();
+            handleCategoryClick(category);
+        });
+    });
+
+    // Lắng nghe sự kiện click trên nút Previous và Next
+    document.querySelector('.prev').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showPosts(currentCategory, currentPage);
+            updatePagination(currentCategory);
+            updateURL();
+        }
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        const articles = document.querySelectorAll(`#${currentCategory} article`);
+        const totalPages = Math.ceil(articles.length / postsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPosts(currentCategory, currentPage);
+            updatePagination(currentCategory);
+            updateURL();
+        }
+    });
+
+    // Khôi phục trạng thái từ URL khi tải lại trang
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFromURL = urlParams.get('category');
+    const pageFromURL = urlParams.get('page');
+
+    if (categoryFromURL) {
+        handleCategoryClick(categoryFromURL);
+        if (pageFromURL) {
+            currentPage = parseInt(pageFromURL, 10); // Khôi phục trang từ URL
+            showPosts(currentCategory, currentPage);
+            updatePagination(currentCategory);
+        }
+    } else {
+        // Hiển thị category mặc định khi trang được tải
+        handleCategoryClick(currentCategory);
+    }
 });
