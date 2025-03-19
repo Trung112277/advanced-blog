@@ -185,6 +185,10 @@ address {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-cols-2 {
+    grid-template-columns: repeat(2, auto);
+}
+
 .block {
     display: block;
 }
@@ -215,6 +219,16 @@ address {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-grow {
+    flex-grow: 1;
 }
 
 .space-between {
@@ -288,7 +302,8 @@ address {
 .absolute {
     position: absolute;
 }
-.sticky{
+
+.sticky {
     position: sticky;
     top: 0;
 }
@@ -321,6 +336,10 @@ address {
 
 .h-62 {
     height: 62px;
+}
+
+.h-48 {
+    height: 48px;
 }
 
 .w-40 {
@@ -401,6 +420,10 @@ address {
 
 .mg-bot-0 {
     margin-bottom: 0px;
+}
+
+.mg-bot-20 {
+    margin-bottom: 20px;
 }
 
 .mg-bot-25 {
@@ -497,6 +520,14 @@ address {
 
 .pad-l-25 {
     padding-left: 25px;
+}
+
+.pad-r-40 {
+    padding-right: 40px;
+}
+
+.pad-l-40 {
+    padding-left: 40px;
 }
 
 .pad-r-100 {
@@ -665,6 +696,9 @@ address {
 .hover-white:hover {
     color: var(--color-white);
 }
+.hover-black:hover {
+    color: var(--color-black);
+}
 
 .hover-bg-black:hover {
     background-color: var(--color-black);
@@ -686,12 +720,20 @@ address {
     font-size: 25px;
 }
 
+.font-14 {
+    font-size: 14px;
+}
+
 .line-height-20 {
     line-height: 20px;
 }
 
 .font-weight-500 {
     font-weight: 500;
+}
+
+.font-weight-700 {
+    font-weight: 700;
 }
 
 .letter-spacing-3 {
@@ -741,14 +783,25 @@ address {
 
 .border-rdu-10 {
     border-radius: 10px;
+
 }
 
 .border-rdu-50 {
     border-radius: 50%;
+    width: calc(50% - 20px);
+}
+
+.border-rdu {
+    border-radius: 9999999px;
 }
 
 .border {
     border: 1px solid var(--color-grey-1);
+}
+
+.border-2 {
+    border: 2px solid var(--color-grey-1);
+
 }
 
 .border-bot {
