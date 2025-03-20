@@ -133,7 +133,10 @@ button {
     cursor: pointer;
 }
 
-input {
+input,
+select,
+option,
+textarea {
     border: none;
     font-size: 16px;
     font-family: "Inter";
@@ -142,12 +145,25 @@ input {
     border: 1px solid #6D6E7680;
     line-height: 28px;
     padding: 13px 20px;
+    border-radius: 0;
 }
 
-input:focus {
+input:focus,
+select:focus,
+option:focus,
+textarea:focus {
     outline: none;
     border: none;
-    border: 1px solid #6D6E7680
+    border: 1px solid #6D6E7680;
+    border-radius: 0;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../images/vector-1.svg) no-repeat right 60px center;
+    background-size: 16px;
 }
 
 strong {
@@ -428,6 +444,10 @@ address {
     margin-top: 20px;
 }
 
+.mg-top-30 {
+    margin-top: 30px;
+}
+
 .mg-top-80 {
     margin-top: 80px;
 }
@@ -534,6 +554,14 @@ address {
 
 .pad-bot-25 {
     padding-bottom: 25px;
+}
+
+.pad-bot-20 {
+    padding-bottom: 20px;
+}
+
+.pad-bot-15 {
+    padding-bottom: 15px;
 }
 
 .pad-bot-23 {
@@ -691,6 +719,10 @@ address {
     font-family: "Sen";
 }
 
+.opacity-6 {
+    opacity: 0.6;
+}
+
 .text-purple {
     color: var(--color-purple);
 }
@@ -775,6 +807,10 @@ address {
     font-weight: 700;
 }
 
+.font-weight-900 {
+    font-weight: 900;
+}
+
 .letter-spacing-3 {
     letter-spacing: 3px;
 }
@@ -804,8 +840,6 @@ address {
 .button:hover:after {
     width: 100%;
 }
-
-
 
 .heading {
     font-size: 48px;
@@ -844,6 +878,10 @@ address {
 
 .border-bot {
     border-bottom: 1px solid var(--color-grey-1);
+}
+
+.border-bot-contact {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.600);
 }
 
 .border-left {
@@ -1077,3 +1115,4 @@ address {
     right: 50%;
     transform: translateX(50%);
 }
+
