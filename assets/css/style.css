@@ -1116,3 +1116,27 @@ address {
     transform: translateX(50%);
 }
 
+.input-box {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    background: white;
+    color: var(--color-black)
+}
+
+input:focus+label,
+input:not(:placeholder-shown)+label {
+    top: 0;
+    left: 10px;
+    font-size: 14px;
+    color: var(--color-purple);
+    padding: 0 10px;
+}
+.w-full{
+    width: 100%;
+}
