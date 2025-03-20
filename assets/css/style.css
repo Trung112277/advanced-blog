@@ -173,6 +173,11 @@ address {
     margin: 0 auto;
 }
 
+.medium-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .none {
     display: none;
 }
@@ -324,6 +329,7 @@ address {
 .index-1 {
     z-index: 1;
 }
+
 .index-2 {
     z-index: 1;
 }
@@ -336,6 +342,10 @@ address {
 .bot-left {
     bottom: 0;
     left: 0;
+}
+
+.bot {
+    bottom: 0;
 }
 
 .h-100 {
@@ -352,6 +362,10 @@ address {
 
 .h-48 {
     height: 48px;
+}
+
+.h-550 {
+    height: 550px;
 }
 
 .w-40 {
@@ -433,6 +447,7 @@ address {
 .mg-bot-0 {
     margin-bottom: 0px;
 }
+
 .mg-bot-10 {
     margin-bottom: 10px;
 }
@@ -468,7 +483,8 @@ address {
 .mg-0 {
     margin: 0;
 }
-.mg-y-16{
+
+.mg-y-16 {
     margin: 16px 0;
 }
 
@@ -867,6 +883,11 @@ address {
     right: 0;
 }
 
+.line-bot-right::after {
+    bottom: -23px;
+    right: 0;
+}
+
 .line-bot-left::after {
     bottom: -23px;
     left: 0;
@@ -877,12 +898,32 @@ address {
     left: 0;
 }
 
+.line-bot-right::before {
+    bottom: -23px;
+    right: 0;
+}
+
+.line-bot-right-50::before {
+    bottom: -50px;
+    right: 0;
+}
+
+.line-bot-right-50::after {
+    bottom: -50px;
+    right: 0;
+}
+
+
 .line-w-1061::before {
     width: 1061px;
 }
 
 .line-w-900::before {
     width: 900px;
+}
+
+.line-w-full::before {
+    width: 100%;
 }
 
 .deco-1::before {
