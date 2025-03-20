@@ -324,6 +324,9 @@ address {
 .index-1 {
     z-index: 1;
 }
+.index-2 {
+    z-index: 1;
+}
 
 .bot-right {
     bottom: 0;
@@ -430,6 +433,9 @@ address {
 .mg-bot-0 {
     margin-bottom: 0px;
 }
+.mg-bot-10 {
+    margin-bottom: 10px;
+}
 
 .mg-bot-20 {
     margin-bottom: 20px;
@@ -461,6 +467,9 @@ address {
 
 .mg-0 {
     margin: 0;
+}
+.mg-y-16{
+    margin: 16px 0;
 }
 
 .pad-0 {

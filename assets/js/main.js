@@ -216,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
         button.style.display = 'flex'; // Hoặc 'block', tùy thuộc vào layout của bạn
     });
 
-    // Hàm hiển thị bài viết theo category và trang
     function showPosts(category, page) {
         const articles = document.querySelectorAll(`#${category} article`);
         const start = (page - 1) * postsPerPage;
@@ -231,6 +230,13 @@ document.addEventListener('DOMContentLoaded', function () {
         articles.forEach((article, index) => {
             if (index >= start && index < end) {
                 article.style.display = 'flex';
+
+                // Cập nhật href và nội dung của thẻ <a> trong bài viết
+                const categoryLink = article.querySelector('a.sub-title');
+                if (categoryLink) {
+                    categoryLink.href = `category.html?category=${category}`; // Cập nhật href
+                    categoryLink.textContent = category.charAt(0).toUpperCase() + category.slice(1); // Cập nhật nội dung
+                }
             }
         });
 
@@ -241,7 +247,6 @@ document.addEventListener('DOMContentLoaded', function () {
             pagination.style.display = 'none';
         }
     }
-
     // Hàm cập nhật Breadcrumb
     function updateBreadcrumb(category) {
         const breadcrumb = document.querySelector('.banner nav ul li:last-child a');
