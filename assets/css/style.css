@@ -271,6 +271,11 @@ address {
     text-align: center;
 }
 
+.align-center {
+    align-content: center;
+    text-align: center;
+}
+
 .baseline {
     align-items: baseline;
 }
@@ -719,6 +724,10 @@ address {
 
 .hover-scale:hover {
     transform: scale(1.2);
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .font-30 {
