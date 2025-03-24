@@ -1,0 +1,41 @@
+@media (max-width: 767px) {
+    /* BASE STYLES */
+
+    /* LAYOUT  */
+    .mobile\:container {
+        max-width: 95%;
+    }
+
+    .mobile\:none {
+        display: none;
+    }
+
+    .mobile\:block {
+        display: block;
+    }
+
+    .mobile\:content-center {
+        justify-content: center;
+    }
+
+    .mobile\:mg-bot-30 {
+        margin-bottom: 30px;
+    }
+
+    .mobile\:pad-bot-0 {
+        padding-bottom: 0;
+    }
+
+    .mobile\:pad-30 {
+        padding: 30px;
+    }
+
+
+    /* UTILITIES */
+    .mobile\:center {
+        text-align: center;
+    }
+
+    /* COMPONENTS */
+
+}

@@ -7,7 +7,11 @@
     <title>Advanced blog</title>
     <meta name="description" content="Advanced Blog">
     <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/desktop-responsive.css">
+    <link rel="stylesheet" href="assets/css/tablet-responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
     <script src="assets/js/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,11 +26,11 @@
 
 <body>
     <header class="header bg-black fixed-top">
-        <div class="container row-between h-80">
+        <div class="container row-between h-80 desktop:container tablet:container mobile:container">
             <div>
                 <a class="logo text-white hover-yellow" href="index.html">&#123;Finsweet</a>
             </div>
-            <nav>
+            <nav class="tablet:none mobile:none">
                 <ul class="flex gap-30">
                     <li>
                         <a aria-label="Home" class="text-white hover-yellow" href="index.html">Home</a>
@@ -45,6 +49,33 @@
                     </li>
                 </ul>
             </nav>
+            <div class="none tablet:block mobile:block">
+                <label for="mobile-menu-toggle" class="mobile-menu-button text-white pointer font-size-30"><i
+                        class="fa-solid fa-bars hover-yellow"></i></label>
+                <input type="checkbox" id="mobile-menu-toggle" class="none menu-toggle">
+                <label for="mobile-menu-toggle" class="menu-overlay none"></label>
+                <nav class="mobile-menu fixed-right w-300 bg-light-yellow opacity-0 translate-x-300">
+                    <ul class="col-between gap-30 pad-30">
+                        <li>
+                            <a aria-label="Home" class="text-black hover-yellow" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a aria-label="Blog" class="text-black hover-yellow" href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a aria-label="About Us" class="text-black hover-yellow" href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a aria-label="Contact Us" class="text-black hover-yellow" href="contact.html">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="button button-header bg-yellow text-black w-full block border-box center">Subscribe</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main role="main" class="main mg-top-80 mg-bot-50 hidden">
@@ -558,13 +589,13 @@
         </section>
     </main>
     <footer class="footer bg-black">
-        <div class="container">
-            <div class="row-between pad-bot-25">
-                <div>
+        <div class="container desktop:container tablet:container mobile:container">
+            <div class="row-between pad-bot-25 mobile:block mobile:pad-bot-0">
+                <div class="mobile:mg-bot-30 mobile:center">
                     <a class="logo text-white hover-yellow" href="index.html">&#123;Finsweet</a>
                 </div>
                 <nav>
-                    <ul class="flex gap-30">
+                    <ul class="flex gap-30 mobile:content-center">
                         <li>
                             <a aria-label="Home" class="text-white hover-yellow" href="index.html">Home</a>
                         </li>
@@ -586,8 +617,8 @@
                     </ul>
                 </nav>
             </div>
-            <div class="row-between pad-100 bg-dark-grey mg-50 gap-30">
-                <h2 class="mg-0 text-white ">
+            <div class="row-between pad-100 bg-dark-grey mg-50 gap-30 tablet:block mobile:pad-30">
+                <h2 class="mg-0 text-white tablet:mg-bot-30">
                     Subscribe to our news letter to get latest updates and news
                 </h2>
                 <form action="submit" class=" gap-20 flex">

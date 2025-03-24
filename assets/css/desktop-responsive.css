@@ -2,6 +2,10 @@
     /* BASE STYLES */
 
     /* LAYOUT  */
+    .desktop\:container {
+        max-width: 991px;
+    }
+
     .desktop\:block {
         display: block;
     }

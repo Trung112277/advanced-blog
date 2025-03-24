@@ -1,0 +1,25 @@
+@media (max-width: 1024px) {
+    /* BASE STYLES */
+
+    /* LAYOUT  */
+    .tablet\:container {
+        max-width: 768px;
+    }
+
+    .tablet\:none {
+        display: none;
+    }
+
+    .tablet\:block {
+        display: block;
+    }
+
+    .tablet\:mg-bot-30 {
+        margin-bottom: 30px;
+    }
+
+    /* UTILITIES */
+
+    /* COMPONENTS */
+
+}
