@@ -1,0 +1,16 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* BASE STYLES */
+
+    /* LAYOUT  */
+    .tablet\:block {
+        display: block;
+    }
+    .tablet\:none {
+        display: none;
+    }
+
+    /* UTILITIES */
+
+    /* COMPONENTS */
+
+}
