@@ -1194,3 +1194,6 @@ article img {
 .img-box img {
     width: 100%;
 }
+.img-normal-w img{
+    width: unset;
+}
