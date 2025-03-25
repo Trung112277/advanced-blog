@@ -51,6 +51,9 @@
     .tablet\:border-none {
         border: none;
     }
+    .tablet\:center{
+        text-align: center;
+    }
 
     /* COMPONENTS */
     .tablet\:line-w-full::before {
