@@ -18,9 +18,18 @@
         display: flex;
         flex-direction: column;
     }
+    .tablet\:col-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 
-    .tablet\:mg-bot-30 {
-        margin-bottom: 30px;
+    .tablet\:bottom-23 {
+        bottom: 23px;
+    }
+
+    .tablet\:position-mid {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .tablet\:grid-cols-2 {
@@ -33,6 +42,22 @@
 
     .tablet\:pad-0 {
         padding: 0;
+    }
+
+    .tablet\:pad-30 {
+        padding: 30px;
+    }
+
+    .tablet\:pad-top-50 {
+        padding-top: 50px;
+    }
+
+    .tablet\:mg-bot-30 {
+        margin-bottom: 30px;
+    }
+
+    .tablet\:mg-0 {
+        margin: 0px;
     }
 
     .tablet\:gap-30 {
@@ -51,7 +76,8 @@
     .tablet\:border-none {
         border: none;
     }
-    .tablet\:center{
+
+    .tablet\:center {
         text-align: center;
     }
 
