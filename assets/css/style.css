@@ -180,8 +180,9 @@ address {
 
 /* LAYOUT  */
 .container {
-    max-width: 1282px;
+    max-width: 1306px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 .small-container {

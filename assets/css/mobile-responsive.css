@@ -14,6 +14,11 @@
         display: block;
     }
 
+    .mobile\:col {
+        display: flex;
+        flex-direction: column;
+    }
+
     .mobile\:content-center {
         justify-content: center;
     }
@@ -30,10 +35,25 @@
         padding: 30px;
     }
 
+    .mobile\:w-1\/2 {
+        width: 50%;
+    }
+    .mobile\:w-full {
+        width: 100%;
+    }
+
+    .mobile\:gap-20 {
+        gap: 30px;
+    }
+
 
     /* UTILITIES */
     .mobile\:center {
         text-align: center;
+    }
+
+    .mobile\:baseline {
+        align-items: baseline;
     }
 
     /* COMPONENTS */
