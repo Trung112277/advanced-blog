@@ -186,13 +186,15 @@ address {
 }
 
 .small-container {
-    max-width: 768px;
+    max-width: 816px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 .medium-container {
-    max-width: 1024px;
+    max-width: 1072px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 .none {
