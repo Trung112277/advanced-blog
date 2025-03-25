@@ -14,12 +14,46 @@
         display: block;
     }
 
+    .tablet\:col {
+        display: flex;
+        flex-direction: column;
+    }
+
     .tablet\:mg-bot-30 {
         margin-bottom: 30px;
     }
 
+    .tablet\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tablet\:w-full {
+        width: 100%;
+    }
+
+    .tablet\:pad-0 {
+        padding: 0;
+    }
+
+    .tablet\:gap-30 {
+        gap: 30px;
+    }
+
     /* UTILITIES */
+    .tablet\:w-full {
+        width: 100%;
+    }
+
+    .tablet\:position-none {
+        position: unset;
+    }
+
+    .tablet\:border-none {
+        border: none;
+    }
 
     /* COMPONENTS */
-
+    .tablet\:line-w-full::before {
+        width: 100%;
+    }
 }

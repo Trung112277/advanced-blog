@@ -10,9 +10,15 @@
         display: block;
     }
 
+    .desktop\:w-full {
+        width: 100%;
+    }
+
     /* UTILITIES */
 
     /* COMPONENTS */
-
+    .desktop\:line-w-full::before {
+        width: 100%;
+    }
 
 }

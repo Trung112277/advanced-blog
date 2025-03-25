@@ -23,8 +23,15 @@
         justify-content: center;
     }
 
+    .mobile\:grid-cols-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .mobile\:mg-bot-30 {
         margin-bottom: 30px;
+    }
+    .mobile\:mg-top-30 {
+        margin-top: 30px;
     }
 
     .mobile\:pad-bot-0 {
@@ -35,9 +42,18 @@
         padding: 30px;
     }
 
+    .mobile\:pad-0 {
+        padding: 0px;
+    }
+
+    .mobile\:pad-y-20 {
+        padding: 20px 0;
+    }
+
     .mobile\:w-1\/2 {
         width: 50%;
     }
+
     .mobile\:w-full {
         width: 100%;
     }
@@ -54,6 +70,14 @@
 
     .mobile\:baseline {
         align-items: baseline;
+    }
+
+    .mobile\:position-none {
+        position: unset;
+    }
+
+    .mobile\:content-center {
+        justify-content: center;
     }
 
     /* COMPONENTS */
