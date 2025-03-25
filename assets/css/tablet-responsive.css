@@ -18,9 +18,14 @@
         display: flex;
         flex-direction: column;
     }
+
     .tablet\:col-reverse {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .tablet\:space-between {
+        justify-content: space-between;
     }
 
     .tablet\:bottom-23 {
